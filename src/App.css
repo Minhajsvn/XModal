@@ -1,0 +1,43 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.darkBg{
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.modal-content{
+  background-color: rgb(255, 250, 244);
+  color: rgb(69, 69, 69);
+  padding: 30px;
+  border-radius: 12px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+.form{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+input{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  height: 40px;
+}
