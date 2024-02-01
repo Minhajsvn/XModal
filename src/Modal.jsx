@@ -45,7 +45,7 @@ export default function Modal({ setIsOpen}) {
     }
 
   return (
-        <div className='darkBg' onClick={() => setIsOpen(false)}>
+        <div className='modal' onClick={() => setIsOpen(false)}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <form className='form' action="submit">
                 <h2>Fill Details</h2>

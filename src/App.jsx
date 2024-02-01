@@ -6,7 +6,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="modal">
+    <div>
       <h1>User Details Modal</h1>
       <button onClick={()=> setIsOpen(true)}>Open Form</button>
       {isOpen && <Modal setIsOpen={setIsOpen} />}
