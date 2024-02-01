@@ -17,10 +17,13 @@ export default function Modal({ setIsOpen}) {
     const handleSubmit = () => {
         // e.preventDefault();
         if(formData != undefined){
-
-            if(formData.phone.length != 10){
-                alert("Invalid phone number. Please enter a 10-digit phone number.");
+            
+            if(formData.phone !== undefined && formData.phone !== ""    ){
+                if(formData.phone.length != 10){
+                    alert("Invalid phone number. Please enter a 10-digit phone number.");
+                }
             }
+            
 
 
             let date = new Date;
@@ -31,11 +34,11 @@ export default function Modal({ setIsOpen}) {
             let formDate = new Date(formData.dob).toLocaleDateString();
             let today = new Date(`${year}-${month}-${day}`).toLocaleDateString()
 
-            if(formDate > today){
+            if(formDate > today && formData.dob){
                 alert("Invalid date of birth. Date of birth cannot be in the future.")
             }
 
-            if(!formData.email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)){
+            if(!formData.email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) && formData.email){
                 alert("Invalid email. Please check your email address.")
             }
         }
